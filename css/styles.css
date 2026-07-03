@@ -654,6 +654,22 @@ h4 {
   color: var(--text-primary);
 }
 
+.creative-notice {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-top: 28px;
+  max-width: var(--measure);
+}
+
+.creative-notice p {
+  margin: 0 0 8px;
+}
+
+.creative-notice p:last-child {
+  margin-bottom: 0;
+}
+
 .card-topline {
   align-items: center;
   display: flex;
