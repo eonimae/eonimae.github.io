@@ -8,6 +8,7 @@
   const analyticalCards = document.querySelectorAll("[data-analytical-platform]");
   const navDropdownItems = document.querySelectorAll(".has-dropdown");
   const workshopToggles = document.querySelectorAll("[data-workshop-toggle]");
+  const focusCards = document.querySelectorAll(".focus-card");
   const defaultView = "home";
 
   function applyTheme(theme) {
@@ -63,10 +64,31 @@
       card.hidden = platform !== "all" && cardPlatform !== platform;
     });
 
+    clearFocusGroup(document.querySelector("#analytical-pieces .card-focus-group"));
+
     analyticalFilterButtons.forEach(function (button) {
       const active = button.getAttribute("data-analytical-filter") === platform;
       button.classList.toggle("active", active);
       button.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  function selectFocusCard(selectedCard) {
+    const cardGroup = selectedCard.closest(".card-focus-group");
+    if (!cardGroup) return;
+
+    cardGroup.classList.add("has-selected");
+    cardGroup.querySelectorAll(".focus-card").forEach(function (card) {
+      card.classList.toggle("is-selected", card === selectedCard);
+    });
+  }
+
+  function clearFocusGroup(cardGroup) {
+    if (!cardGroup) return;
+
+    cardGroup.classList.remove("has-selected");
+    cardGroup.querySelectorAll(".focus-card").forEach(function (card) {
+      card.classList.remove("is-selected");
     });
   }
 
@@ -162,6 +184,20 @@
 
       button.setAttribute("aria-expanded", String(willOpen));
       panel.hidden = !willOpen;
+    });
+  });
+
+  focusCards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      selectFocusCard(card);
+    });
+
+    card.addEventListener("keydown", function (event) {
+      if (event.target.closest("a")) return;
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      event.preventDefault();
+      selectFocusCard(card);
     });
   });
 

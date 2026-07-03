@@ -520,6 +520,48 @@ h4 {
   border-color: var(--border-strong);
 }
 
+.focus-card {
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease, filter 180ms ease, opacity 180ms ease;
+}
+
+.card-focus-group.has-selected .focus-card:not(.is-selected),
+.card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within) {
+  background: color-mix(in srgb, var(--surface) 76%, var(--surface-soft) 24%);
+  border-color: var(--border);
+  filter: saturate(0.45) blur(0.25px);
+  opacity: 0.52;
+}
+
+.card-focus-group:has(.focus-card:focus-within) .focus-card:focus-within {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  filter: none;
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover) {
+    background: color-mix(in srgb, var(--surface) 76%, var(--surface-soft) 24%);
+    border-color: var(--border);
+    filter: saturate(0.45) blur(0.25px);
+    opacity: 0.52;
+  }
+
+  .card-focus-group:has(.focus-card:hover) .focus-card:hover {
+    background: var(--surface);
+    border-color: var(--border-strong);
+    filter: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focus-card {
+    transition: none;
+  }
+}
+
 .featured-card {
   grid-column: 1 / -1;
 }
