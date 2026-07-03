@@ -135,32 +135,79 @@
   navDropdownItems.forEach(function (item) {
     const parent = item.querySelector(".nav-parent");
     if (!parent) return;
+    let closeTimer = null;
+    let pointerActivated = false;
+    let pointerFocus = false;
+    let suppressNextFocusOpen = false;
 
     function setExpanded(expanded) {
       parent.setAttribute("aria-expanded", String(expanded));
     }
 
+    function cancelClose() {
+      if (!closeTimer) return;
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+
+    function closeDropdown() {
+      cancelClose();
+      setExpanded(false);
+    }
+
+    function schedulePointerClose() {
+      cancelClose();
+      closeTimer = window.setTimeout(function () {
+        if (!item.matches(":hover") && (!item.contains(document.activeElement) || pointerFocus)) {
+          setExpanded(false);
+        }
+        closeTimer = null;
+      }, 1000);
+    }
+
     item.addEventListener("mouseenter", function () {
+      cancelClose();
       setExpanded(true);
     });
 
     item.addEventListener("mouseleave", function () {
-      setExpanded(false);
+      schedulePointerClose();
     });
 
     item.addEventListener("focusin", function () {
+      if (suppressNextFocusOpen) {
+        suppressNextFocusOpen = false;
+        return;
+      }
+      cancelClose();
       setExpanded(true);
     });
 
     item.addEventListener("focusout", function (event) {
       if (!item.contains(event.relatedTarget)) {
-        setExpanded(false);
+        closeDropdown();
       }
     });
 
+    item.addEventListener("pointerdown", function (event) {
+      pointerFocus = true;
+      pointerActivated = Boolean(event.target.closest("[data-view-link]"));
+    });
+
+    item.addEventListener("click", function (event) {
+      if (!pointerActivated || !event.target.closest("[data-view-link]")) return;
+      pointerActivated = false;
+      if (document.activeElement && item.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+      closeDropdown();
+    });
+
     item.addEventListener("keydown", function (event) {
+      pointerFocus = false;
       if (event.key === "Escape") {
-        setExpanded(false);
+        closeDropdown();
+        suppressNextFocusOpen = true;
         parent.focus();
       }
     });

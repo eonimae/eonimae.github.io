@@ -785,6 +785,36 @@ h4 {
   padding: 32px 0 56px;
 }
 
+.footer-signature {
+  align-items: center;
+  display: flex;
+  gap: 9px;
+}
+
+.footer-signature p {
+  margin: 0;
+  min-width: 0;
+}
+
+.footer-logo {
+  display: block;
+  flex: 0 0 auto;
+  height: auto;
+  width: 26px;
+}
+
+.footer-logo-dark {
+  display: none;
+}
+
+body.dark-mode .footer-logo-light {
+  display: none;
+}
+
+body.dark-mode .footer-logo-dark {
+  display: block;
+}
+
 @media (max-width: 980px) {
   .site-header {
     align-items: flex-start;

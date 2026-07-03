@@ -2,26 +2,25 @@
 
 Static personal website for Camilo Fuentes Peña / eonimae.
 
-## Project scope
-
-This repository is intended to publish a static editorial website at:
+The site is published at:
 
 `https://eonimae.github.io`
 
-The site is deliberately simple:
+## Technical scope
 
-- plain HTML;
-- plain CSS;
+The project uses:
+
+- HTML;
+- CSS;
 - minimal JavaScript;
-- local assets only;
-- no build tools;
+- local assets;
 - no frameworks;
+- no build tools;
 - no backend;
 - no database;
-- no CMS;
-- no required external services.
+- no CMS.
 
-## Current structure
+## Public tracked structure
 
 ```text
 eonimae.github.io/
@@ -31,51 +30,57 @@ eonimae.github.io/
 ├─ js/
 │  └─ main.js
 ├─ assets/
-│  ├─ images/
-│  ├─ documents/
-│  └─ icons/
-├─ REFERENCE_DUMP.md
+│  └─ images/
+│     ├─ chompipe.png
+│     ├─ mapache.png
+│     ├─ robot.png
+│     └─ robot2.png
+├─ .gitignore
 └─ README.md
 ```
 
-## V1 sections
+The `docs/` directory contains internal working materials. It remains local only
+and is excluded from publication through `.gitignore`.
 
-- Home / About
-- Analytical Writing
-- AI Technical Work
-- Workshops
+## Navigation
+
+- Home
+  - Bio
 - Narrative Work
-- Contact / Footer
+  - Novel
+  - Visual Narrative
+  - Narrative Inquiry
+  - Narrative Protocols
+- Analytical Writing
+  - Analytical pieces
+  - Technical pieces
+  - AI Model Probes
+- Workshops
+- Contact
 
-## Editorial constraints
+## Site behavior
 
-BOF must be presented with the corrected, limited framing:
+The current site includes:
 
-> "Es un bucle de refinamiento iterativo con juez basado en modelo, que corre en
-> tiempo de ejecucion: un sistema de generacion de texto donde un modelo escribe,
-> otro evalua, y el texto se reescribe segun ese resultado hasta un maximo de
-> intentos o hasta cruzar un umbral."
+- hash-based navigation between internal views;
+- light/dark mode saved in `localStorage`;
+- platform filters in Analytical pieces;
+- Workshops accordion sections;
+- active/inactive card interaction across multi-card sections;
+- keyboard support for navigation and interactive cards;
+- responsive layout;
+- `prefers-reduced-motion` support;
+- external links opened with `target="_blank"` and `rel="noopener noreferrer"`.
 
-Do not present BOF as a general reusable framework, model training method, model
-modification method, objective evaluator, or broad behavioral orchestration claim.
+## Workflow
 
-## Maintenance
+Website changes should follow this order:
 
-Open `index.html` directly in a browser for local review. No installation step is
-required.
+1. implement changes locally;
+2. review visually and functionally with Camilo;
+3. wait for explicit approval;
+4. stage only the approved files;
+5. commit and push after approval.
 
-## Current V1 scaffold
-
-The current scaffold includes:
-
-- semantic single-file HTML;
-- primary navigation that switches visible in-page views;
-- Home / About hero area;
-- `What I do` placeholder grid;
-- reusable work cards;
-- accessible expandable card details;
-- light/dark theme toggle saved in `localStorage`;
-- responsive layout for desktop, tablet, and mobile.
-
-All missing publication, workshop, narrative, contact, and external-link details
-are intentionally marked as placeholders until final content is supplied.
+Never use `git add .`. Internal working materials, including `docs/`, must not
+be published.
