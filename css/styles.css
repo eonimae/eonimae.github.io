@@ -354,7 +354,8 @@ h4 {
 .identity-line,
 .lead,
 .section-intro {
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
 }
 
 .identity-line {
@@ -431,7 +432,8 @@ h4 {
 .area-card p,
 .work-card p,
 .contact-card p {
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
 }
 
 .section-head {
@@ -466,8 +468,27 @@ h4 {
   max-width: var(--measure);
 }
 
+#home .section-head,
+#home .view-subtitle,
+#home .view-copy {
+  max-width: 880px;
+  width: 100%;
+}
+
+#home .view-copy {
+  max-width: 712.4px;
+}
+
+#home .view-subtitle,
+#bio .view-copy,
+#narrative-inquiry .section-intro,
+#narrative-protocols .protocol-list {
+  max-width: 712.4px;
+}
+
 .view-copy {
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
   font-size: 1.02rem;
   line-height: 1.82;
   max-width: var(--measure);
@@ -478,7 +499,8 @@ h4 {
 }
 
 .protocol-list {
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
   display: grid;
   gap: 24px;
   max-width: var(--measure);
@@ -674,7 +696,8 @@ h4 {
 }
 
 .workshop-contact-note {
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
   margin: 20px 0 0;
 }
 
@@ -697,7 +720,8 @@ h4 {
 }
 
 .creative-notice {
-  color: var(--text-muted);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
   font-size: 0.9rem;
   line-height: 1.65;
   margin-top: 28px;
@@ -730,6 +754,8 @@ h4 {
 }
 
 .card-excerpt {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
   font-size: 1.01rem;
   line-height: 1.74;
   max-width: 760px;
