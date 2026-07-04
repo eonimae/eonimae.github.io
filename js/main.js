@@ -9,6 +9,7 @@
   const navDropdownItems = document.querySelectorAll(".has-dropdown");
   const workshopToggles = document.querySelectorAll("[data-workshop-toggle]");
   const focusCards = document.querySelectorAll(".focus-card");
+  const visitCount = document.querySelector("[data-visit-count]");
   const defaultView = "home";
 
   function applyTheme(theme) {
@@ -90,6 +91,36 @@
     cardGroup.querySelectorAll(".focus-card").forEach(function (card) {
       card.classList.remove("is-selected");
     });
+  }
+
+  function loadVisitCount() {
+    if (!visitCount || !window.fetch) return;
+
+    const controller = window.AbortController ? new AbortController() : null;
+    const timeout = controller ? window.setTimeout(function () {
+      controller.abort();
+    }, 3000) : null;
+
+    fetch("https://eonimae.goatcounter.com/counter/TOTAL.json", {
+      signal: controller ? controller.signal : undefined,
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Visit counter unavailable");
+        return response.json();
+      })
+      .then(function (data) {
+        if (data && data.count) {
+          visitCount.textContent = data.count;
+        }
+      })
+      .catch(function () {
+        visitCount.textContent = "—";
+      })
+      .finally(function () {
+        if (timeout) {
+          window.clearTimeout(timeout);
+        }
+      });
   }
 
   applyTheme(getInitialTheme());
@@ -248,5 +279,6 @@
     });
   });
 
+  loadVisitCount();
   showView(getViewFromHash(), false);
 })();

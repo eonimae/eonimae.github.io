@@ -811,15 +811,29 @@ h4 {
   padding: 32px 0 56px;
 }
 
+.footer-row {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
 .footer-signature {
   align-items: center;
   display: flex;
   gap: 9px;
+  min-width: 0;
 }
 
 .footer-signature p {
   margin: 0;
   min-width: 0;
+}
+
+.visit-counter {
+  flex: 0 0 auto;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .footer-logo {
@@ -941,6 +955,12 @@ body.dark-mode .footer-logo-dark {
   .detail-toggle,
   .disabled-link {
     min-height: 40px;
+  }
+
+  .footer-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 

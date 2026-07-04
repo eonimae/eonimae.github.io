@@ -465,13 +465,24 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-signature">
-      <img class="footer-logo footer-logo-light" src="assets/images/logo2.png" alt="" aria-hidden="true">
-      <img class="footer-logo footer-logo-dark" src="assets/images/logo1.png" alt="" aria-hidden="true">
-      <p>© 2026 Camilo Fuentes Peña · eonimae · Masaya, Nicaragua</p>
+    <div class="footer-row">
+      <div class="footer-signature">
+        <img class="footer-logo footer-logo-light" src="assets/images/logo2.png" alt="" aria-hidden="true">
+        <img class="footer-logo footer-logo-dark" src="assets/images/logo1.png" alt="" aria-hidden="true">
+        <p>© 2026 Camilo Fuentes Peña · eonimae · Masaya, Nicaragua</p>
+      </div>
+      <p class="visit-counter" aria-label="Total site visits">
+        # visits · <span data-visit-count>—</span>
+      </p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) {
+      window.goatcounter = { no_onload: true };
+    }
+  </script>
+  <script data-goatcounter="https://eonimae.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
