@@ -506,7 +506,8 @@ body.dark-mode #home .view-copy strong em {
 }
 
 #home .view-subtitle {
-  color: #7FB8AB;
+  color: #225C5A;
+  font-weight: 700;
 }
 
 #narrative-protocols .protocol-section h3 {
@@ -519,10 +520,6 @@ body.dark-mode #home .view-subtitle {
 
 body.dark-mode #narrative-protocols .protocol-section h3 {
   color: var(--text-primary);
-}
-
-#home .view-subtitle {
-  font-weight: 700;
 }
 
 #home .view-subtitle,
@@ -616,7 +613,7 @@ body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card
 
 body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not(.is-selected)::after,
 body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within)::after {
-  background: rgba(251, 248, 241, 0.95);
+  background: rgba(251, 248, 241, 0.90);
   border-radius: inherit;
   content: "";
   inset: 0;
@@ -645,7 +642,7 @@ body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card
   }
 
   body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover)::after {
-    background: rgba(251, 248, 241, 0.95);
+    background: rgba(251, 248, 241, 0.90);
     border-radius: inherit;
     content: "";
     inset: 0;
