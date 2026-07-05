@@ -21,19 +21,19 @@
 }
 
 body.dark-mode {
-  --bg: #333333;
-  --surface: #6383A0;
-  --surface-soft: #202725;
-  --surface-wash: #141918;
-  --text-primary: #f5f1e8;
-  --text-secondary: #d2c8bb;
-  --text-muted: #9d9285;
-  --border: rgba(222, 213, 200, 0.16);
-  --border-strong: rgba(222, 213, 200, 0.34);
-  --accent: #8dbdb3;
-  --accent-soft: rgba(141, 189, 179, 0.12);
-  --accent-muted: rgba(141, 189, 179, 0.24);
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --bg: #221F1B;
+  --surface: #3D362E;
+  --surface-soft: #4A4237;
+  --surface-wash: #17140F;
+  --text-primary: #E4E0D8;
+  --text-secondary: #B8B2A6;
+  --text-muted: #918B7E;
+  --border: rgba(228, 224, 216, 0.12);
+  --border-strong: rgba(228, 224, 216, 0.26);
+  --accent: #7FB8AB;
+  --accent-soft: rgba(127, 184, 171, 0.16);
+  --accent-muted: rgba(127, 184, 171, 0.32);
+  --shadow-sm: 0 1px 2px rgba(20, 16, 12, 0.35);
 }
 
 * {
@@ -231,7 +231,7 @@ main,
   padding: 6px;
   pointer-events: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 2px);
   transform: translateY(-4px);
   transition: opacity 140ms ease, transform 140ms ease, visibility 140ms ease;
   visibility: hidden;
@@ -308,13 +308,6 @@ main,
 .eyebrow,
 .card-type {
   color: var(--accent);
-}
-
-body.dark-mode #novel .card-type,
-body.dark-mode #narrative-inquiry .card-type,
-body.dark-mode #analytical-pieces .card-type,
-body.dark-mode #technical-pieces .card-type {
-  color: #CAE9BE;
 }
 
 .eyebrow {
@@ -409,16 +402,8 @@ h4 {
   color: var(--text-muted);
 }
 
-body.dark-mode #novel .link-pill {
-  background: #32455C;
-  color: #EED9C4;
-}
-
-body.dark-mode #narrative-inquiry .link-pill,
-body.dark-mode #analytical-pieces .link-pill,
-body.dark-mode #technical-pieces .link-pill {
-  background: #32455C;
-  color: #EED9C4;
+body.dark-mode .link-pill {
+  color: var(--accent);
 }
 
 .area-card,
@@ -518,6 +503,23 @@ body.dark-mode #technical-pieces .link-pill {
 
 body.dark-mode #home .view-copy strong em {
   color: var(--text-secondary);
+}
+
+#home .view-subtitle,
+#narrative-protocols .protocol-section h3 {
+  color: #333333;
+}
+
+body.dark-mode #home .view-subtitle {
+  color: var(--accent);
+}
+
+body.dark-mode #narrative-protocols .protocol-section h3 {
+  color: var(--text-primary);
+}
+
+#home .view-subtitle {
+  font-weight: 400;
 }
 
 #home .view-subtitle,
@@ -638,6 +640,44 @@ body.dark-mode #home .view-copy strong em {
 
 .mini-card {
   padding: clamp(22px, 2.6vw, 30px);
+}
+
+body.dark-mode .mini-card {
+  background: #1D4376;
+}
+
+body.dark-mode .mini-card-grid.card-focus-group.has-selected .mini-card {
+  background: #1D4376;
+  filter: none;
+  opacity: 1;
+}
+
+body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:focus-within) .mini-card:not(:focus-within),
+body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:active) .mini-card:not(:active) {
+  background: #1D4376;
+  filter: saturate(0.62);
+  opacity: 0.58;
+}
+
+body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:focus-within) .mini-card:focus-within,
+body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:active) .mini-card:active {
+  background: #1D4376;
+  filter: none;
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:hover) .mini-card:not(:hover) {
+    background: #1D4376;
+    filter: saturate(0.62);
+    opacity: 0.58;
+  }
+
+  body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:hover) .mini-card:hover {
+    background: #1D4376;
+    filter: none;
+    opacity: 1;
+  }
 }
 
 .inquiry-card-grid {
