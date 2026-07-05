@@ -21,8 +21,8 @@
 }
 
 body.dark-mode {
-  --bg: #101414;
-  --surface: #171b1a;
+  --bg: #333333;
+  --surface: #6383A0;
   --surface-soft: #202725;
   --surface-wash: #141918;
   --text-primary: #f5f1e8;
@@ -101,8 +101,8 @@ main,
 .site-header {
   align-items: center;
   display: grid;
-  gap: 20px;
-  grid-template-columns: minmax(180px, 1fr) auto auto;
+  gap: 16px;
+  grid-template-columns: minmax(160px, 1fr) auto auto;
   padding: 30px 0 22px;
 }
 
@@ -149,6 +149,7 @@ main,
 .site-nav a,
 .nav-parent,
 .theme-toggle,
+.language-toggle,
 .filter-button,
 .link-pill,
 .detail-toggle,
@@ -166,6 +167,7 @@ main,
 .site-nav a,
 .nav-parent,
 .theme-toggle,
+.language-toggle,
 .filter-button,
 .detail-toggle {
   background: var(--surface);
@@ -173,24 +175,35 @@ main,
   cursor: pointer;
 }
 
-.theme-toggle {
+.visual-controls {
+  align-items: center;
+  display: flex;
+  gap: 8px;
   justify-self: end;
-  min-width: 64px;
-  width: auto;
 }
 
-.theme-toggle {
+.theme-toggle,
+.language-toggle {
   background: transparent;
   border-color: var(--border);
   color: var(--text-muted);
   font-weight: 400;
-  margin-left: 10px;
+  justify-content: center;
+}
+
+.theme-toggle {
+  min-width: 54px;
+}
+
+.language-toggle {
+  min-width: 42px;
 }
 
 .site-nav a:hover,
 .nav-parent:hover,
 .nav-parent:focus-visible,
 .theme-toggle:hover,
+.language-toggle:hover,
 .filter-button:hover,
 .detail-toggle:hover,
 .filter-button.active,
@@ -226,7 +239,8 @@ main,
 }
 
 .nav-item:hover .nav-dropdown,
-.nav-item:focus-within .nav-dropdown {
+.nav-item:focus-within .nav-dropdown,
+.nav-parent[aria-expanded="true"] + .nav-dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -294,6 +308,13 @@ main,
 .eyebrow,
 .card-type {
   color: var(--accent);
+}
+
+body.dark-mode #novel .card-type,
+body.dark-mode #narrative-inquiry .card-type,
+body.dark-mode #analytical-pieces .card-type,
+body.dark-mode #technical-pieces .card-type {
+  color: #CAE9BE;
 }
 
 .eyebrow {
@@ -388,6 +409,18 @@ h4 {
   color: var(--text-muted);
 }
 
+body.dark-mode #novel .link-pill {
+  background: #32455C;
+  color: #EED9C4;
+}
+
+body.dark-mode #narrative-inquiry .link-pill,
+body.dark-mode #analytical-pieces .link-pill,
+body.dark-mode #technical-pieces .link-pill {
+  background: #32455C;
+  color: #EED9C4;
+}
+
 .area-card,
 .work-card,
 .contact-card {
@@ -477,6 +510,14 @@ h4 {
 
 #home .view-copy {
   max-width: 712.4px;
+}
+
+#home .view-copy strong em {
+  color: var(--text-secondary);
+}
+
+body.dark-mode #home .view-copy strong em {
+  color: var(--text-secondary);
 }
 
 #home .view-subtitle,
@@ -866,7 +907,7 @@ body.dark-mode .footer-logo-dark {
     justify-content: flex-start;
   }
 
-  .theme-toggle {
+  .visual-controls {
     justify-self: start;
   }
 
@@ -950,6 +991,7 @@ body.dark-mode .footer-logo-dark {
   .site-nav a,
   .nav-parent,
   .theme-toggle,
+  .language-toggle,
   .filter-button,
   .link-pill,
   .detail-toggle,
@@ -967,7 +1009,7 @@ body.dark-mode .footer-logo-dark {
 @media print {
   .skip-link,
   .site-nav,
-  .theme-toggle {
+  .visual-controls {
     display: none !important;
   }
 

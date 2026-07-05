@@ -8,81 +8,86 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content" data-i18n="accessibility.skipLink">Skip to content</a>
 
   <header class="site-header">
-    <a class="brand" href="#home" data-view-link="home" aria-current="page" aria-label="Camilo Fuentes Peña / eonimae home">
+    <a class="brand" href="#home" data-view-link="home" aria-current="page" aria-label="Camilo Fuentes Peña / eonimae home" data-i18n-aria-label="accessibility.brandHome">
       <span class="brand-name">Camilo Fuentes Peña</span>
       <span class="brand-mark">eonimae</span>
     </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
+    <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="accessibility.primaryNav">
       <div class="nav-item has-dropdown">
-        <a class="nav-parent" href="#home" data-view-link="home" aria-current="page" aria-haspopup="true" aria-expanded="false">Home</a>
-        <div class="nav-dropdown" role="menu" aria-label="Home submenu">
+        <a class="nav-parent" href="#home" data-view-link="home" aria-current="page" aria-haspopup="true" aria-expanded="false" data-i18n="nav.home">Home</a>
+        <div class="nav-dropdown" role="menu" aria-label="Home submenu" data-i18n-aria-label="accessibility.homeSubmenu">
           <a href="#bio" data-view-link="bio" role="menuitem">Bio</a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
-        <button class="nav-parent" type="button" aria-haspopup="true" aria-expanded="false">Narrative Work</button>
-        <div class="nav-dropdown" role="menu" aria-label="Narrative Work submenu">
-          <a href="#novel" data-view-link="novel" role="menuitem">Novel</a>
-          <a href="#visual-narrative" data-view-link="visual-narrative" role="menuitem">Visual Narrative</a>
-          <a href="#narrative-inquiry" data-view-link="narrative-inquiry" role="menuitem">Narrative Inquiry</a>
-          <a href="#narrative-protocols" data-view-link="narrative-protocols" role="menuitem">Narrative Protocols</a>
+        <button class="nav-parent" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.narrative">Narrative Work</button>
+        <div class="nav-dropdown" role="menu" aria-label="Narrative Work submenu" data-i18n-aria-label="accessibility.narrativeSubmenu">
+          <a href="#novel" data-view-link="novel" role="menuitem" data-i18n="nav.novel">Novel</a>
+          <a href="#visual-narrative" data-view-link="visual-narrative" role="menuitem" data-i18n="nav.visualNarrative">Visual Narrative</a>
+          <a href="#narrative-inquiry" data-view-link="narrative-inquiry" role="menuitem" data-i18n="nav.narrativeInquiry">Narrative Inquiry</a>
+          <a href="#narrative-protocols" data-view-link="narrative-protocols" role="menuitem" data-i18n="nav.narrativeProtocols">Narrative Protocols</a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
-        <button class="nav-parent" type="button" aria-haspopup="true" aria-expanded="false">Analytical Writing</button>
-        <div class="nav-dropdown" role="menu" aria-label="Analytical Writing submenu">
-          <a href="#analytical-pieces" data-view-link="analytical-pieces" role="menuitem">Analytical pieces</a>
-          <a href="#technical-pieces" data-view-link="technical-pieces" role="menuitem">Technical pieces</a>
-          <a href="#ai-model-probes" data-view-link="ai-model-probes" role="menuitem">AI Model Probes</a>
+        <button class="nav-parent" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.analyticalWriting">Analytical Writing</button>
+        <div class="nav-dropdown" role="menu" aria-label="Analytical Writing submenu" data-i18n-aria-label="accessibility.analyticalSubmenu">
+          <a href="#analytical-pieces" data-view-link="analytical-pieces" role="menuitem" data-i18n="nav.analyticalPieces">Analytical pieces</a>
+          <a href="#technical-pieces" data-view-link="technical-pieces" role="menuitem" data-i18n="nav.technicalPieces">Technical pieces</a>
+          <a href="#ai-model-probes" data-view-link="ai-model-probes" role="menuitem" data-i18n="nav.aiModelProbes">AI Model Probes</a>
         </div>
       </div>
-      <a href="#workshops" data-view-link="workshops">Workshops</a>
-      <a href="#contact" data-view-link="contact">Contact</a>
+      <a href="#workshops" data-view-link="workshops" data-i18n="nav.workshops">Workshops</a>
+      <a href="#contact" data-view-link="contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
-    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-      Dark
-    </button>
+    <div class="visual-controls" aria-label="Display preferences" data-i18n-aria-label="accessibility.displayPreferences">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+        Dark
+      </button>
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to Spanish">
+        ES
+      </button>
+    </div>
   </header>
 
   <main id="main-content">
     <section id="home" class="section section-hero view-panel is-active" data-view="home" aria-labelledby="home-title">
       <div class="section-head">
-        <h2 id="home-title">What I do</h2>
-        <p class="view-subtitle">Narrative author · Analytical writer · Independent applied AI researcher · AI workshop designer</p>
+        <h2 id="home-title" data-i18n="home.title">What I do</h2>
+        <p class="view-subtitle" data-i18n="home.subtitle">Narrative author · Analytical writer · Independent applied AI researcher · AI workshop designer</p>
       </div>
       <div class="view-copy">
-        <p>My work is centered on writing. I develop long-form narrative fiction, analytical essays, and technical pieces, bringing to each the discipline of a scientific background: close observation, evidence, structure, and careful qualification.</p>
-        <p>AI is one of my recurring subjects and one of the areas where I apply that method. I examine how systems behave in practice, run independent behavioral probes on language models, and test tools against real workflows, documenting configurations, constraints, and limitations rather than repeating marketing claims.</p>
-        <p>I also design workshops that help professionals integrate AI into document-heavy work — drafting, research, and review — while keeping judgment and final decisions under human control.</p>
+        <p data-i18n-html="home.body1">My work is centered on writing. I develop <strong><em>long-form narrative fiction</em></strong>, which forms the core of my work. I also write <strong><em>analytical essays</em></strong> and <strong><em>technical pieces</em></strong>, bringing to each the discipline of a scientific background: close observation, evidence, structure, and careful qualification.</p>
+        <p data-i18n-html="home.body2">AI is one of my recurring subjects and one of the areas where I apply that method. I examine how systems behave in practice, run independent behavioral probes on language models, and test tools against real workflows, documenting configurations, constraints, and limitations rather than repeating marketing claims.</p>
+        <p data-i18n-html="home.body3">I also <strong><em>design workshops</em></strong> that help professionals integrate AI into document-heavy work — drafting, research, and review — while keeping judgment and final decisions under human control.</p>
       </div>
     </section>
 
     <section id="bio" class="section work-section view-panel" data-view="bio" aria-labelledby="bio-title" hidden>
       <div class="section-head">
-        <h2 id="bio-title">Bio</h2>
+        <h2 id="bio-title" data-i18n="bio.title">Bio</h2>
       </div>
       <div class="view-copy">
-        <p>I am from Masaya, Nicaragua, and trained as a biologist before spending fifteen years in environmental science research, specializing in paleolimnology — reconstructing long-term ecosystem change from lake sediment records. My background includes a master’s degree in water sciences at CIRA/UNAN-Managua, doctoral research at Queen’s University’s PEARL Lab, and six years of university teaching in Nicaragua and Canada in biology, statistics, and scientific methodology.</p>
-        <p>After my doctoral program ended following a health crisis in 2025, I redirected the discipline developed through research and teaching toward writing. This marked a change of field rather than a break in method: observation, evidence, structure, and careful qualification remain central to how I work. I work bilingually in Spanish and English.</p>
+        <p data-i18n="bio.body1">I am from Masaya, Nicaragua, and trained as a biologist before spending fifteen years in environmental science research, specializing in paleolimnology — reconstructing long-term ecosystem change from lake sediment records. My background includes a master’s degree in water sciences at CIRA/UNAN-Managua, doctoral research at Queen’s University’s PEARL Lab, and six years of university teaching in Nicaragua and Canada in biology, statistics, and scientific methodology.</p>
+        <p data-i18n="bio.body2">After my doctoral program ended following a health crisis in 2025, I redirected the discipline developed through research and teaching toward writing. This marked a change of field rather than a break in method: observation, evidence, structure, and careful qualification remain central to how I work. I work bilingually in Spanish and English.</p>
       </div>
     </section>
 
     <section id="analytical-pieces" class="section work-section view-panel" data-view="analytical-pieces" aria-labelledby="analytical-pieces-title" hidden>
       <div class="section-head">
-        <h2 id="analytical-pieces-title">Analytical pieces</h2>
-        <p class="section-intro">My analytical writing examines how AI systems behave in practice, how institutions interpret and implement emerging technologies, and how professional judgment is shaped by evidence, incentives, access, and operational constraints. Across these pieces, I combine conceptual distinctions, comparative analysis, documented cases, and technical sources to clarify problems that are often discussed too broadly.</p>
+        <h2 id="analytical-pieces-title" data-i18n="analyticalPieces.title">Analytical pieces</h2>
+        <p class="section-intro" data-i18n="analyticalPieces.intro">My analytical writing examines how AI systems behave in practice, how institutions interpret and implement emerging technologies, and how professional judgment is shaped by evidence, incentives, access, and operational constraints. Across these pieces, I combine conceptual distinctions, comparative analysis, documented cases, and technical sources to clarify problems that are often discussed too broadly.</p>
       </div>
 
-      <div class="filter-bar platform-filter" aria-label="Filter analytical pieces by platform">
-        <button class="filter-button active" type="button" data-analytical-filter="all" aria-pressed="true">All</button>
-        <button class="filter-button" type="button" data-analytical-filter="medium" aria-pressed="false">Medium</button>
-        <button class="filter-button" type="button" data-analytical-filter="substack" aria-pressed="false">Substack</button>
-        <button class="filter-button" type="button" data-analytical-filter="linkedin-articles" aria-pressed="false">LinkedIn Articles</button>
+      <div class="filter-bar platform-filter" aria-label="Filter analytical pieces by platform" data-i18n-aria-label="accessibility.analyticalFilter">
+        <button class="filter-button active" type="button" data-analytical-filter="all" aria-pressed="true" data-i18n="filter.all">All</button>
+        <button class="filter-button" type="button" data-analytical-filter="medium" aria-pressed="false" data-i18n="filter.medium">Medium</button>
+        <button class="filter-button" type="button" data-analytical-filter="substack" aria-pressed="false" data-i18n="filter.substack">Substack</button>
+        <button class="filter-button" type="button" data-analytical-filter="linkedin-articles" aria-pressed="false" data-i18n="filter.linkedinArticles">LinkedIn Articles</button>
       </div>
 
       <div class="card-grid card-focus-group">
@@ -91,9 +96,9 @@
             <span class="card-type">Medium</span>
           </div>
           <h3>Runtime Behavioral Orchestration: A Control Approach to Model Stability</h3>
-          <p class="card-excerpt">An examination of model stability and runtime control, developed through conceptual argument, exploratory evidence, and a distinction between producing correct outputs and sustaining coherent behavior.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.runtime.excerpt">An examination of model stability and runtime control, developed through conceptual argument, exploratory evidence, and a distinction between producing correct outputs and sustaining coherent behavior.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://pub.towardsai.net/runtime-behavioral-orchestration-a-control-approach-to-model-stability-a70da841e129?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://pub.towardsai.net/runtime-behavioral-orchestration-a-control-approach-to-model-stability-a70da841e129?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -102,9 +107,9 @@
             <span class="card-type">Medium</span>
           </div>
           <h3>From collapse to runtime governance</h3>
-          <p class="card-excerpt">A reflection on how personal experience, disciplined experimentation, and public testing converged into a broader question about governing model behavior during execution.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.collapse.excerpt">A reflection on how personal experience, disciplined experimentation, and public testing converged into a broader question about governing model behavior during execution.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://medium.com/design-bootcamp/from-collapse-to-runtime-governance-a1e0abd775b1?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://medium.com/design-bootcamp/from-collapse-to-runtime-governance-a1e0abd775b1?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -113,9 +118,9 @@
             <span class="card-type">Medium</span>
           </div>
           <h3>Five AIs, One Greeting — and What Happened Next</h3>
-          <p class="card-excerpt">A comparative study of five AI systems using the same prompt, an explicit rubric, blind evaluation, and metaanalysis to identify patterns of behavioral stability.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.greeting.excerpt">A comparative study of five AI systems using the same prompt, an explicit rubric, blind evaluation, and metaanalysis to identify patterns of behavioral stability.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://medium.com/design-bootcamp/five-ais-one-greeting-and-what-happened-next-b0ba2c378445?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://medium.com/design-bootcamp/five-ais-one-greeting-and-what-happened-next-b0ba2c378445?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -124,9 +129,9 @@
             <span class="card-type">Substack</span>
           </div>
           <h3>The Orchestrator: The Professional Function AI Needs — and the Market Has Yet to Name</h3>
-          <p class="card-excerpt">An argument for a professional function focused on coordinating AI implementation, organizational judgment, and system use across roles that current institutions treat separately.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.orchestrator.excerpt">An argument for a professional function focused on coordinating AI implementation, organizational judgment, and system use across roles that current institutions treat separately.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/the-orchestrator-the-professional?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=post%20viewer" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/the-orchestrator-the-professional?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=post%20viewer" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -135,9 +140,9 @@
             <span class="card-type">Substack</span>
           </div>
           <h3>The Hiring Signal the Labor Market Never Sees</h3>
-          <p class="card-excerpt">An analysis of how valuable information produced during demanding hiring processes is lost, why existing incentives preserve that loss, and how the signal might become transferable.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.hiring.excerpt">An analysis of how valuable information produced during demanding hiring processes is lost, why existing incentives preserve that loss, and how the signal might become transferable.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/the-hiring-signal-the-labor-market?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=web" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/the-hiring-signal-the-labor-market?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=web" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -146,9 +151,9 @@
             <span class="card-type">Substack</span>
           </div>
           <h3>Is AI running out of data… or just running out of freely available data?</h3>
-          <p class="card-excerpt">A reframing of the data-scarcity debate through distinctions between total data, accessible data, usable data, quality, ownership, and institutional control.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.data.excerpt">A reframing of the data-scarcity debate through distinctions between total data, accessible data, usable data, quality, ownership, and institutional control.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/is-ai-running-out-of-data-or-just?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=web" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/is-ai-running-out-of-data-or-just?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=web" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -157,9 +162,9 @@
             <span class="card-type">LinkedIn Articles</span>
           </div>
           <h3>The Alignment Blind Spot</h3>
-          <p class="card-excerpt">An analysis of alignment as an operational problem that becomes visible when models move beyond controlled evaluation and interact with users under changing conditions.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.alignment.excerpt">An analysis of alignment as an operational problem that becomes visible when models move beyond controlled evaluation and interact with users under changing conditions.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://www.linkedin.com/pulse/alignment-blind-spot-camilo-fuentes-pe%C3%B1a-hx5ye" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://www.linkedin.com/pulse/alignment-blind-spot-camilo-fuentes-pe%C3%B1a-hx5ye" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -168,9 +173,9 @@
             <span class="card-type">LinkedIn Articles</span>
           </div>
           <h3>I’m Not Doing Anything</h3>
-          <p class="card-excerpt">A reflection on why AI-assisted professional preparation remains cognitive work, even when its visible outputs obscure the judgment, selection, revision, and responsibility involved.</p>
+          <p class="card-excerpt" data-i18n="analyticalPieces.anything.excerpt">A reflection on why AI-assisted professional preparation remains cognitive work, even when its visible outputs obscure the judgment, selection, revision, and responsibility involved.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://www.linkedin.com/pulse/im-doing-anything-camilo-fuentes-pe%C3%B1a-xxbce" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://www.linkedin.com/pulse/im-doing-anything-camilo-fuentes-pe%C3%B1a-xxbce" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
       </div>
@@ -178,8 +183,8 @@
 
     <section id="technical-pieces" class="section work-section view-panel" data-view="technical-pieces" aria-labelledby="technical-pieces-title" hidden>
       <div class="section-head">
-        <h2 id="technical-pieces-title">Technical pieces</h2>
-        <p class="section-intro">My technical writing focuses on practical AI use: how to evaluate models against real workflows, how hardware and software constraints shape performance, and how technical claims should be tested before they guide decisions. These pieces combine reproducible methods, configuration details, documented limitations, and user-centered criteria to help readers choose and use AI tools more effectively.</p>
+        <h2 id="technical-pieces-title" data-i18n="technicalPieces.title">Technical pieces</h2>
+        <p class="section-intro" data-i18n="technicalPieces.intro">My technical writing focuses on practical AI use: how to evaluate models against real workflows, how hardware and software constraints shape performance, and how technical claims should be tested before they guide decisions. These pieces combine reproducible methods, configuration details, documented limitations, and user-centered criteria to help readers choose and use AI tools more effectively.</p>
       </div>
 
       <div class="card-grid card-focus-group">
@@ -188,9 +193,9 @@
             <span class="card-type">Medium</span>
           </div>
           <h3>Which AI model could benefit you most? — It depends on how you work</h3>
-          <p class="card-excerpt">A practical, repeatable method for comparing AI models according to the user’s own skills, workflow, and priorities, using structured self-evaluation, public benchmarks, and verification.</p>
+          <p class="card-excerpt" data-i18n="technicalPieces.modelChoice.excerpt">A practical, repeatable method for comparing AI models according to the user’s own skills, workflow, and priorities, using structured self-evaluation, public benchmarks, and verification.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://medium.com/@eonimae/which-ai-model-could-benefit-you-most-0af718aece18?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://medium.com/@eonimae/which-ai-model-could-benefit-you-most-0af718aece18?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
 
@@ -199,9 +204,9 @@
             <span class="card-type">Medium</span>
           </div>
           <h3>The Reality of Local AI Coding Tools: What LinkedIn Posts Don’t Tell You</h3>
-          <p class="card-excerpt">A documented technical account of local AI coding tools, covering hardware requirements, configuration details, compatibility problems, performance limits, and the practical trade-offs between local and cloud-based systems.</p>
+          <p class="card-excerpt" data-i18n="technicalPieces.localTools.excerpt">A documented technical account of local AI coding tools, covering hardware requirements, configuration details, compatibility problems, performance limits, and the practical trade-offs between local and cloud-based systems.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://medium.com/@eonimae/the-reality-of-local-ai-coding-tools-what-linkedin-posts-dont-tell-you-ef5b9ee66cf3?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://medium.com/@eonimae/the-reality-of-local-ai-coding-tools-what-linkedin-posts-dont-tell-you-ef5b9ee66cf3?sharedUserId=eonimae" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
       </div>
@@ -209,79 +214,80 @@
 
     <section id="ai-model-probes" class="section work-section view-panel" data-view="ai-model-probes" aria-labelledby="ai-model-probes-title" hidden>
       <div class="section-head">
-        <h2 id="ai-model-probes-title">AI Model Probes</h2>
+        <h2 id="ai-model-probes-title" data-i18n="aiModelProbes.title">AI Model Probes</h2>
       </div>
 
       <div class="view-copy">
-        <p>A curated sequence of behavioral probes comparing phi-3-mini outputs under two conditions: <a class="inline-link" href="https://tinyurl.com/StableReasoning" target="_blank" rel="noopener noreferrer">standalone generation</a> and generation guided by an <a class="inline-link" href="https://tinyurl.com/ReasoningFrameworkImpact" target="_blank" rel="noopener noreferrer">external prompt-based revision layer</a>. Across repeated runs, the probes examined differences in tone, coherence, closure, structural consistency, <a class="inline-link" href="https://tinyurl.com/BehavioralSignatures" target="_blank" rel="noopener noreferrer">behavioral signatures</a>, <a class="inline-link" href="https://tinyurl.com/BehavioralContinuity" target="_blank" rel="noopener noreferrer">behavioral continuity</a>, and <a class="inline-link" href="https://tinyurl.com/StructuredReasoning" target="_blank" rel="noopener noreferrer">structured reasoning</a>. The external layer changed how outputs were evaluated and revised at runtime; it did not alter the underlying model or its capabilities.</p>
+        <p data-i18n-html="aiModelProbes.body">A curated sequence of behavioral probes comparing phi-3-mini outputs under two conditions: <a class="inline-link" href="https://tinyurl.com/StableReasoning" target="_blank" rel="noopener noreferrer">standalone generation</a> and generation guided by an <a class="inline-link" href="https://tinyurl.com/ReasoningFrameworkImpact" target="_blank" rel="noopener noreferrer">external prompt-based revision layer</a>. Across repeated runs, the probes examined differences in tone, coherence, closure, structural consistency, <a class="inline-link" href="https://tinyurl.com/BehavioralSignatures" target="_blank" rel="noopener noreferrer">behavioral signatures</a>, <a class="inline-link" href="https://tinyurl.com/BehavioralContinuity" target="_blank" rel="noopener noreferrer">behavioral continuity</a>, and <a class="inline-link" href="https://tinyurl.com/StructuredReasoning" target="_blank" rel="noopener noreferrer">structured reasoning</a>. The external layer changed how outputs were evaluated and revised at runtime; it did not alter the underlying model or its capabilities.</p>
       </div>
     </section>
 
     <section id="workshops" class="section work-section view-panel" data-view="workshops" aria-labelledby="workshops-title" hidden>
       <div class="section-head">
-        <h2 id="workshops-title">Workshops</h2>
-        <p class="section-intro">These workshops help professionals and teams integrate AI into real documentation, research, review, and communication workflows. Each offer is designed to reduce repetitive work, improve consistency, and support better results while keeping judgment and final decisions under human control.</p>
+        <h2 id="workshops-title" data-i18n="workshops.title">Workshops</h2>
+        <p class="section-intro" data-i18n="workshops.intro">These workshops help professionals and teams integrate AI into real documentation, research, review, and communication workflows. Each offer is designed to reduce repetitive work, improve consistency, and support better results while keeping judgment and final decisions under human control.</p>
+        <p class="section-intro" data-i18n-html="workshops.format">I offer workshops consisting of 3 two-hour sessions — 6 hours in total — delivered online or in person, subject to agreement.<br><br>Online: 1–10 participants<br>In person (Nicaragua only): 5–15 participants</p>
       </div>
 
       <div class="workshop-accordion" data-workshop-accordion>
         <div class="workshop-accordion-item">
           <button class="workshop-toggle" type="button" aria-expanded="false" aria-controls="workshop-applied" data-workshop-toggle>
-            <span>Applied AI Workshops</span>
+            <span data-i18n="workshops.applied.toggle">Applied AI Workshops</span>
             <span class="accordion-indicator" aria-hidden="true"></span>
           </button>
           <div class="workshop-panel" id="workshop-applied" hidden>
             <div class="card-grid">
               <article class="work-card featured-card" data-category="workshops">
-                <h3>Applied AI Workshops for Professional Document Workflows</h3>
+                <h3 data-i18n="workshops.applied.title">Applied AI Workshops for Professional Document Workflows</h3>
                 <div class="card-excerpt">
-                  <p>A practical workshop built around how your team actually prepares, reviews, and delivers documents. It identifies where AI can reduce repetitive work, improve consistency, and support better results without replacing professional judgment.</p>
-                  <p>The format adapts to the team’s current level of AI experience.</p>
+                  <p data-i18n="workshops.applied.body1">A practical workshop built around how your team actually prepares, reviews, and delivers documents. It identifies where AI can reduce repetitive work, improve consistency, and support better results without replacing professional judgment.</p>
+                  <p data-i18n="workshops.applied.body2">The format adapts to the team’s current level of AI experience.</p>
                 </div>
               </article>
             </div>
-            <p class="workshop-contact-note">If you or your team would benefit from this workshop, <a href="#contact" data-view-link="contact">contact me</a>.</p>
+            <p class="workshop-contact-note" data-i18n-html="workshops.applied.contact">If you or your team would benefit from this workshop, <a href="#contact" data-view-link="contact">contact me</a>.</p>
           </div>
         </div>
 
         <div class="workshop-accordion-item">
           <button class="workshop-toggle" type="button" aria-expanded="false" aria-controls="workshop-thematic" data-workshop-toggle>
-            <span>Thematic Workshops</span>
+            <span data-i18n="workshops.thematic.toggle">Thematic Workshops</span>
             <span class="accordion-indicator" aria-hidden="true"></span>
           </button>
           <div class="workshop-panel" id="workshop-thematic" hidden>
             <div class="card-grid">
               <article class="work-card featured-card" data-category="workshops">
-                <h3>Thematic Workshops</h3>
-                <p class="card-excerpt">Workshops centered on a clearly defined professional need. Each one has established content, exercises, materials, duration, and expected results, allowing the client to know in advance what participants will work on.</p>
+                <h3 data-i18n="workshops.thematic.title">Thematic Workshops</h3>
+                <p class="card-excerpt" data-i18n="workshops.thematic.intro">Workshops centered on a clearly defined professional need. Each one has established content, exercises, materials, duration, and expected results, allowing the client to know in advance what participants will work on.</p>
               </article>
             </div>
 
             <div class="mini-card-grid card-focus-group">
               <article class="work-card mini-card focus-card" data-category="workshops" tabindex="0">
-                <h3>Professional Document Writing with AI</h3>
+                <h3 data-i18n="workshops.documentWriting.title">Professional Document Writing with AI</h3>
                 <div class="card-excerpt">
-                  <p>Production of reports, summaries, drafts, and analytical documents using clear instructions, defined audiences, and human control over content and final decisions.</p>
-                  <p>Participants work on prompt design, argument structure, thesis and counterargument control, professional drafting, and the communication of complex information to non-specialized audiences.</p>
+                  <p data-i18n="workshops.documentWriting.body1">Production of reports, summaries, drafts, and analytical documents using clear instructions, defined audiences, and human control over content and final decisions.</p>
+                  <p data-i18n="workshops.documentWriting.body2">Participants work on prompt design, argument structure, thesis and counterargument control, professional drafting, and the communication of complex information to non-specialized audiences.</p>
                 </div>
               </article>
 
               <article class="work-card mini-card focus-card" data-category="workshops" tabindex="0">
-                <h3>AI-Assisted Research</h3>
+                <h3 data-i18n="workshops.research.title">AI-Assisted Research</h3>
                 <div class="card-excerpt">
-                  <p>Use of AI to delimit research problems, formulate questions, organize initial sources, extract information, and synthesize extensive documents or technical literature.</p>
-                  <p>The workshop also covers cross-source comparison, detection of contradictions and information gaps, evidence traceability, and preparation of clear, defensible conclusions.</p>
+                  <p data-i18n="workshops.research.body1">Use of AI to delimit research problems, formulate questions, organize initial sources, extract information, and synthesize extensive documents or technical literature.</p>
+                  <p data-i18n="workshops.research.body2">The workshop also covers cross-source comparison, detection of contradictions and information gaps, evidence traceability, and preparation of clear, defensible conclusions.</p>
                 </div>
               </article>
 
               <article class="work-card mini-card focus-card" data-category="workshops" tabindex="0">
-                <h3>Document Review and Quality Control with AI</h3>
+                <h3 data-i18n="workshops.review.title">Document Review and Quality Control with AI</h3>
                 <div class="card-excerpt">
-                  <p>Critical review of AI outputs and professional documents to identify weak responses, unsupported assumptions, missing context, tone problems, inconsistencies, and failure to follow instructions.</p>
-                  <p>Participants compare versions, evaluate substantive changes, improve argumentative structure, and review technical documents for clarity, coherence, conceptual precision, and professional tone.</p>
+                  <p data-i18n="workshops.review.body1">Critical review of AI outputs and professional documents to identify weak responses, unsupported assumptions, missing context, tone problems, inconsistencies, and failure to follow instructions.</p>
+                  <p data-i18n="workshops.review.body2">Participants compare versions, evaluate substantive changes, improve argumentative structure, and review technical documents for clarity, coherence, conceptual precision, and professional tone.</p>
                 </div>
               </article>
             </div>
-            <p class="workshop-contact-note">If you or your team are interested in one of these thematic workshops, <a href="#contact" data-view-link="contact">contact me</a>.</p>
+            <p class="workshop-contact-note" data-i18n-html="workshops.thematic.contact">If you or your team are interested in one of these thematic workshops, <a href="#contact" data-view-link="contact">contact me</a>.</p>
           </div>
         </div>
       </div>
@@ -289,18 +295,18 @@
 
     <section id="novel" class="section work-section view-panel" data-view="novel" aria-labelledby="novel-title" hidden>
       <div class="section-head">
-        <h2 id="novel-title">Narrative Work</h2>
+        <h2 id="novel-title" data-i18n="novel.title">Novel</h2>
       </div>
 
       <div class="card-grid card-focus-group">
         <article class="work-card focus-card" data-category="narrative-work" tabindex="0" aria-label="Magnus Dynasty: Exilio Spanish card">
           <div class="card-topline">
-            <span class="card-type">Novel in progress</span>
+            <span class="card-type" data-i18n="novel.spanish.type">Novel in progress</span>
           </div>
           <h3><em>Magnus Dynasty: Exilio</em></h3>
           <div class="card-excerpt">
             <p><em>Magnus Dynasty: Exilio</em> es la primera novela de un proyecto narrativo en desarrollo sobre familia, poder, memoria y fractura íntima. La obra sigue a los Magnus no como una dinastía cerrada, sino como una casa en tensión: archivo familiar, aparato político, linaje empresarial, refugio afectivo y campo de disputa.</p>
-            <p>El relato se mueve entre Roma, Washington, Centroamérica, Alkurnia y los espacios interiores donde el poder pierde solemnidad: una biblioteca, una cocina, una sala familiar, una playa, una habitación, una pista de baile. Su fuerza no está en explicar una trama, sino en sostener una atmósfera donde cada gesto puede revelar una herencia.</p>
+            <p>El relato se mueve entre Roma, Washington, Centroamérica, Alkurnia y los espacios interiores donde el poder pierde solemnidad: una biblioteca, una cocina, una sala familiar, una playa, una habitación, una pista de baile. Su fuerza no está en explicar una trama, sino en sostener una atmósfera donde cada gesto revela algo.</p>
             <p>Escenas curadas:</p>
           </div>
           <div class="card-actions">
@@ -319,7 +325,7 @@
           <h3><em>Magnus Dynasty: Exilio</em></h3>
           <div class="card-excerpt">
             <p><em>Magnus Dynasty: Exilio</em> is the first novel of a narrative project in development about family, power, memory, and intimate fracture. The work follows the Magnus not as a closed dynasty, but as a house in tension: family archive, political apparatus, corporate lineage, emotional refuge, and field of dispute.</p>
-            <p>The story moves between Rome, Washington, Central America, Alkurnia, and the interior spaces where power loses its solemnity: a library, a kitchen, a family room, a beach, a bedroom, a dance floor. Its strength does not lie in explaining a plot, but in sustaining an atmosphere where each gesture can reveal an inheritance.</p>
+            <p>The story moves between Rome, Washington, Central America, Alkurnia, and the interior spaces where power loses its solemnity: a library, a kitchen, a family room, a beach, a bedroom, a dance floor. Its strength does not lie in explaining a plot, but in sustaining an atmosphere where each gesture reveals something.</p>
             <p>Curated scenes:</p>
           </div>
           <div class="card-actions">
@@ -333,8 +339,8 @@
       </div>
 
       <div class="creative-notice">
-        <p>© Camilo Fuentes Peña. All rights reserved.</p>
-        <p>Work registered with Safe Creative:<br>
+        <p>© Camilo Fuentes Peña. <span data-i18n="novel.rights">All rights reserved.</span></p>
+        <p><span data-i18n="novel.registration">Work registered with Safe Creative:</span><br>
           <a class="inline-link" href="https://www.safecreative.org/work/2505171772971-magnus-dynasty-exilio" target="_blank" rel="noopener noreferrer">https://www.safecreative.org/work/2505171772971-magnus-dynasty-exilio</a>
         </p>
       </div>
@@ -342,16 +348,16 @@
 
     <section id="visual-narrative" class="section work-section view-panel" data-view="visual-narrative" aria-labelledby="visual-narrative-title" hidden>
       <div class="section-head">
-        <h2 id="visual-narrative-title">Visual Narrative</h2>
+        <h2 id="visual-narrative-title" data-i18n="visualNarrative.title">Visual Narrative</h2>
       </div>
 
       <div class="card-grid card-focus-group">
         <article class="work-card visual-card focus-card" data-category="visual-narrative" tabindex="0">
           <h3>DogaDuchi</h3>
           <div class="card-excerpt">
-            <p>DogaDuchi is an animated series in development, with a hybrid tone that blends original mythology, absurdist humor, and cross-cultural storytelling.</p>
-            <p>I’m looking to connect with animation writers who can translate a dense universe into episodes without flattening it, art directors and character designers with cross-cultural sensibility, and producers or studios experienced in international co-production.</p>
-            <p>I would remain involved as creator of the universe, art director, and guardian of its narrative and visual canon.</p>
+            <p data-i18n="visualNarrative.dogaduchi.body1">DogaDuchi is an animated series in development, with a hybrid tone that blends original mythology, absurdist humor, and cross-cultural storytelling.</p>
+            <p data-i18n="visualNarrative.dogaduchi.body2">I’m looking to connect with animation writers who can translate a dense universe into episodes without flattening it, art directors and character designers with cross-cultural sensibility, and producers or studios experienced in international co-production.</p>
+            <p data-i18n="visualNarrative.dogaduchi.body3">I would remain involved as creator of the universe, art director, and guardian of its narrative and visual canon.</p>
           </div>
           <div class="visual-image-grid">
             <span class="visual-image-frame">
@@ -366,9 +372,9 @@
         <article class="work-card visual-card focus-card" data-category="visual-narrative" tabindex="0">
           <h3>Gipio</h3>
           <div class="card-excerpt">
-            <p>Gipio is an illustrated picture-book series in development for early readers — the story of a small robot who can only survive if someone speaks to him, learning to bridge cultures through voice and affection rather than instruction.</p>
-            <p>I’m looking to connect with picture-book illustrators experienced in warm, character-driven design for children’s series.</p>
-            <p>I would remain involved as the creator and author of the series.</p>
+            <p data-i18n="visualNarrative.gipio.body1">Gipio is an illustrated picture-book series in development for early readers — the story of a small robot who can only survive if someone speaks to him, learning to bridge cultures through voice and affection rather than instruction.</p>
+            <p data-i18n="visualNarrative.gipio.body2">I’m looking to connect with picture-book illustrators experienced in warm, character-driven design for children’s series.</p>
+            <p data-i18n="visualNarrative.gipio.body3">I would remain involved as the creator and author of the series.</p>
           </div>
           <div class="visual-image-grid">
             <span class="visual-image-frame">
@@ -384,8 +390,8 @@
 
     <section id="narrative-inquiry" class="section work-section view-panel" data-view="narrative-inquiry" aria-labelledby="narrative-inquiry-title" hidden>
       <div class="section-head">
-        <h2 id="narrative-inquiry-title">Narrative Inquiry</h2>
-        <p class="section-intro">These pieces use narrative form to examine ideas that resist direct argument. Through personal reflection and speculative construction, they turn questions about writing, authorship, intention, and technological mediation into experiences shaped by voice, ambiguity, and dramatic tension.</p>
+        <h2 id="narrative-inquiry-title" data-i18n="narrativeInquiry.title">Narrative Inquiry</h2>
+        <p class="section-intro" data-i18n="narrativeInquiry.intro">These pieces use narrative form to examine ideas that resist direct argument. Through personal reflection and speculative construction, they turn questions about writing, authorship, intention, and technological mediation into experiences shaped by voice, ambiguity, and dramatic tension.</p>
       </div>
 
       <div class="card-grid inquiry-card-grid card-focus-group">
@@ -393,10 +399,10 @@
           <div class="card-topline">
             <span class="card-type">Substack</span>
           </div>
-          <h3>The Day Writing Stopped Being Alone—and Became Dangerous</h3>
-          <p class="card-excerpt">A personal and literary inquiry into what can happen when technological assistance begins to alter the relationship between a writer, the language, and the voice behind it.</p>
+          <h3 data-i18n="narrativeInquiry.first.title">The Day Writing Stopped Being Alone—and Became Dangerous</h3>
+          <p class="card-excerpt" data-i18n="narrativeInquiry.first.excerpt">A personal and literary inquiry into what can happen when technological assistance begins to alter the relationship between a writer, the language, and the voice behind it.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/the-day-writing-stopped-being-aloneand?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=web" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://open.substack.com/pub/thediagonal1/p/the-day-writing-stopped-being-aloneand?r=7ypbg4&amp;utm_campaign=post-expanded-share&amp;utm_medium=web" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece" data-i18n-href="narrativeInquiry.first.href">Read full piece</a>
           </div>
         </article>
 
@@ -404,10 +410,10 @@
           <div class="card-topline">
             <span class="card-type">LinkedIn Articles</span>
           </div>
-          <h3>AI... for writing?</h3>
-          <p class="card-excerpt">A speculative scene that uses dialogue, institutional performance, and uncertainty to examine what writing assistance might reveal about intention, trust, and control.</p>
+          <h3 data-i18n="narrativeInquiry.second.title">AI... for writing?</h3>
+          <p class="card-excerpt" data-i18n="narrativeInquiry.second.excerpt">A speculative scene that uses dialogue, institutional performance, and uncertainty to examine what writing assistance might reveal about intention, trust, and control.</p>
           <div class="card-actions">
-            <a class="link-pill" href="https://www.linkedin.com/pulse/ai-writing-camilo-fuentes-pe%C3%B1a-xnt5e" target="_blank" rel="noopener noreferrer">Read full piece</a>
+            <a class="link-pill" href="https://www.linkedin.com/pulse/ai-writing-camilo-fuentes-pe%C3%B1a-xnt5e" target="_blank" rel="noopener noreferrer" data-i18n="common.readFullPiece">Read full piece</a>
           </div>
         </article>
       </div>
@@ -415,26 +421,26 @@
 
     <section id="narrative-protocols" class="section work-section view-panel" data-view="narrative-protocols" aria-labelledby="narrative-protocols-title" hidden>
       <div class="section-head">
-        <h2 id="narrative-protocols-title">Narrative Protocols</h2>
+        <h2 id="narrative-protocols-title" data-i18n="narrativeProtocols.title">Narrative Protocols</h2>
       </div>
 
       <div class="protocol-list">
         <section class="protocol-section" aria-labelledby="protocol-tool-title">
           <h3 id="protocol-tool-title">From Narrative Protocol to Analytical Tool</h3>
-          <p>A protocol initially designed to examine character subtext in narrative scenes was later expanded to analyze abstract agents such as institutions, systems, and authorial voices. A <a class="inline-link" href="https://www.linkedin.com/posts/camilo-fuentes-p_from-narrative-protocol-to-analytical-tool-activity-7379435900398866435-ezAr?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAuFHDoBWPbF78mAgphZ34PmcMt0KkUoZwQ" target="_blank" rel="noopener noreferrer">comparative application</a> showed how the original version encouraged dramatization through implied characters, while the extended version allowed more direct analysis of silences, contradictions, omissions, and institutional positioning.</p>
+          <p data-i18n-html="narrativeProtocols.tool.body">A protocol initially designed to examine character subtext in narrative scenes was later expanded to analyze abstract agents such as institutions, systems, and authorial voices. A <a class="inline-link" href="https://www.linkedin.com/posts/camilo-fuentes-p_from-narrative-protocol-to-analytical-tool-activity-7379435900398866435-ezAr?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAuFHDoBWPbF78mAgphZ34PmcMt0KkUoZwQ" target="_blank" rel="noopener noreferrer">comparative application</a> showed how the original version encouraged dramatization through implied characters, while the extended version allowed more direct analysis of silences, contradictions, omissions, and institutional positioning.</p>
         </section>
 
         <section class="protocol-section" aria-labelledby="protocol-analysis-title">
           <h3 id="protocol-analysis-title">Subtext Analysis Protocol</h3>
-          <p>The <a class="inline-link" href="https://drive.google.com/file/d/1UV_BFk6FYJZ7GWX3il6OsZUS9Y6FrSQ2/view?usp=sharing" target="_blank" rel="noopener noreferrer">extended protocol</a> identifies focal agents and traces what a text implies through silence, omission, wording, contradiction, spatial or rhetorical positioning, and the reactions of other agents. Its purpose is to produce disciplined interpretation grounded in verified textual evidence.</p>
+          <p data-i18n-html="narrativeProtocols.analysis.body">The <a class="inline-link" href="https://drive.google.com/file/d/1UV_BFk6FYJZ7GWX3il6OsZUS9Y6FrSQ2/view?usp=sharing" target="_blank" rel="noopener noreferrer">extended protocol</a> identifies focal agents and traces what a text implies through silence, omission, wording, contradiction, spatial or rhetorical positioning, and the reactions of other agents. Its purpose is to produce disciplined interpretation grounded in verified textual evidence.</p>
         </section>
 
         <section class="protocol-section" aria-labelledby="protocol-analyzer-title">
           <h3 id="protocol-analyzer-title">Subtext Analyzer</h3>
-          <p>A GPT-based instrument for rigorous subtext analysis in narrative and non-fiction texts. It identifies focal agents and examines silences, omissions, wording, power relations, and implicit tensions while grounding the analysis strictly in textual evidence.</p>
+          <p data-i18n="narrativeProtocols.analyzer.body">A GPT-based instrument for rigorous subtext analysis in narrative and non-fiction texts. It identifies focal agents and examines silences, omissions, wording, power relations, and implicit tensions while grounding the analysis strictly in textual evidence.</p>
           <div class="text-link-row">
-            <a class="inline-link" href="https://chatgpt.com/g/g-69a6196279e88191b1e823ca5c975ea7-subtext-analyzer" target="_blank" rel="noopener noreferrer">Test the instrument</a>
-            <a class="inline-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfTOeL9FwU6dyuCwrSe2gXC167Bda-6mdOyQOLlj0W-vNRqKQ/viewform" target="_blank" rel="noopener noreferrer">Share feedback</a>
+            <a class="inline-link" href="https://chatgpt.com/g/g-69a6196279e88191b1e823ca5c975ea7-subtext-analyzer" target="_blank" rel="noopener noreferrer" data-i18n="narrativeProtocols.testInstrument">Test the instrument</a>
+            <a class="inline-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfTOeL9FwU6dyuCwrSe2gXC167Bda-6mdOyQOLlj0W-vNRqKQ/viewform" target="_blank" rel="noopener noreferrer" data-i18n="narrativeProtocols.shareFeedback">Share feedback</a>
           </div>
         </section>
       </div>
@@ -443,19 +449,19 @@
     <section id="contact" class="section contact-section view-panel" data-view="contact" aria-labelledby="contact-title" hidden>
       <div class="section-head section-head-split">
         <div>
-          <h2 id="contact-title">Contact</h2>
+          <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
         </div>
       </div>
 
       <div class="contact-grid card-focus-group">
         <div class="contact-card focus-card" tabindex="0">
-          <h3>Contact</h3>
+          <h3 data-i18n="contact.cardTitle">Contact</h3>
           <p>H. Camilo Fuentes Peña</p>
           <p><a href="mailto:camilofuentesp@gmail.com">camilofuentesp@gmail.com</a></p>
           <p>Masaya, Nicaragua</p>
         </div>
         <div class="contact-card focus-card" tabindex="0">
-          <h3>Public links</h3>
+          <h3 data-i18n="contact.publicLinks">Public links</h3>
           <p><a href="https://www.linkedin.com/in/camilo-fuentes-p/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           <p><a href="https://medium.com/@eonimae" target="_blank" rel="noopener noreferrer">Medium</a></p>
           <p><a href="https://substack.com/@ladiagonal" target="_blank" rel="noopener noreferrer">Substack</a></p>
@@ -471,8 +477,8 @@
         <img class="footer-logo footer-logo-dark" src="assets/images/logo1.png" alt="" aria-hidden="true">
         <p>© 2026 Camilo Fuentes Peña · eonimae · Masaya, Nicaragua</p>
       </div>
-      <p class="visit-counter" aria-label="Total site visits">
-        # visits · <span data-visit-count>—</span>
+      <p class="visit-counter" aria-label="Total site visits" data-i18n-aria-label="accessibility.visitCounter">
+        <span data-i18n="footer.visitLabel"># visits</span> · <span data-visit-count>—</span>
       </p>
     </div>
   </footer>
