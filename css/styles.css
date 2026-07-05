@@ -505,7 +505,10 @@ body.dark-mode #home .view-copy strong em {
   color: var(--text-secondary);
 }
 
-#home .view-subtitle,
+#home .view-subtitle {
+  color: #7FB8AB;
+}
+
 #narrative-protocols .protocol-section h3 {
   color: #333333;
 }
@@ -519,7 +522,7 @@ body.dark-mode #narrative-protocols .protocol-section h3 {
 }
 
 #home .view-subtitle {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 #home .view-subtitle,
@@ -595,7 +598,7 @@ body.dark-mode #narrative-protocols .protocol-section h3 {
   background: color-mix(in srgb, var(--surface) 76%, var(--surface-soft) 24%);
   border-color: var(--border);
   filter: saturate(0.45) blur(0.25px);
-  opacity: 0.52;
+  opacity: 0.47;
 }
 
 .card-focus-group:has(.focus-card:focus-within) .focus-card:focus-within {
@@ -605,12 +608,28 @@ body.dark-mode #narrative-protocols .protocol-section h3 {
   opacity: 1;
 }
 
+body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not(.is-selected),
+body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within) {
+  opacity: 1;
+  position: relative;
+}
+
+body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not(.is-selected)::after,
+body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within)::after {
+  background: rgba(251, 248, 241, 0.95);
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover) {
     background: color-mix(in srgb, var(--surface) 76%, var(--surface-soft) 24%);
     border-color: var(--border);
     filter: saturate(0.45) blur(0.25px);
-    opacity: 0.52;
+    opacity: 0.47;
   }
 
   .card-focus-group:has(.focus-card:hover) .focus-card:hover {
@@ -618,6 +637,20 @@ body.dark-mode #narrative-protocols .protocol-section h3 {
     border-color: var(--border-strong);
     filter: none;
     opacity: 1;
+  }
+
+  body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover) {
+    opacity: 1;
+    position: relative;
+  }
+
+  body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover)::after {
+    background: rgba(251, 248, 241, 0.95);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
   }
 }
 
@@ -656,7 +689,7 @@ body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:focus-within) .mi
 body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:active) .mini-card:not(:active) {
   background: #1D4376;
   filter: saturate(0.62);
-  opacity: 0.58;
+  opacity: 0.52;
 }
 
 body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:focus-within) .mini-card:focus-within,
@@ -670,7 +703,7 @@ body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:active) .mini-car
   body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:hover) .mini-card:not(:hover) {
     background: #1D4376;
     filter: saturate(0.62);
-    opacity: 0.58;
+    opacity: 0.52;
   }
 
   body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:hover) .mini-card:hover {
