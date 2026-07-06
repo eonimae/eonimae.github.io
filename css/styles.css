@@ -590,8 +590,8 @@ body.dark-mode #narrative-protocols .protocol-section h3 {
   transition: border-color 160ms ease, background-color 160ms ease, filter 180ms ease, opacity 180ms ease;
 }
 
-.card-focus-group.has-selected .focus-card:not(.is-selected),
-.card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within) {
+.card-focus-group.has-selected .focus-card:not([data-magnus-card]):not(.is-selected),
+.card-focus-group:has(.focus-card:focus-within) .focus-card:not([data-magnus-card]):not(:focus-within) {
   background: color-mix(in srgb, var(--surface) 76%, var(--surface-soft) 24%);
   border-color: var(--border);
   filter: saturate(0.45) blur(0.25px);
@@ -605,14 +605,14 @@ body.dark-mode #narrative-protocols .protocol-section h3 {
   opacity: 1;
 }
 
-body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not(.is-selected),
-body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within) {
+body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not([data-magnus-card]):not(.is-selected),
+body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not([data-magnus-card]):not(:focus-within) {
   opacity: 1;
   position: relative;
 }
 
-body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not(.is-selected)::after,
-body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not(:focus-within)::after {
+body:not(.dark-mode) .card-focus-group.has-selected .focus-card:not([data-magnus-card]):not(.is-selected)::after,
+body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card:not([data-magnus-card]):not(:focus-within)::after {
   background: rgba(251, 248, 241, 0.90);
   border-radius: inherit;
   content: "";
@@ -622,7 +622,7 @@ body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover) {
+  .card-focus-group:has(.focus-card:hover) .focus-card:not([data-magnus-card]):not(:hover) {
     background: color-mix(in srgb, var(--surface) 76%, var(--surface-soft) 24%);
     border-color: var(--border);
     filter: saturate(0.45) blur(0.25px);
@@ -636,12 +636,12 @@ body:not(.dark-mode) .card-focus-group:has(.focus-card:focus-within) .focus-card
     opacity: 1;
   }
 
-  body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover) {
+  body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not([data-magnus-card]):not(:hover) {
     opacity: 1;
     position: relative;
   }
 
-  body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not(:hover)::after {
+  body:not(.dark-mode) .card-focus-group:has(.focus-card:hover) .focus-card:not([data-magnus-card]):not(:hover)::after {
     background: rgba(251, 248, 241, 0.90);
     border-radius: inherit;
     content: "";

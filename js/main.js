@@ -7,6 +7,7 @@
   const detailButtons = document.querySelectorAll(".detail-toggle");
   const analyticalFilterButtons = document.querySelectorAll("[data-analytical-filter]");
   const analyticalCards = document.querySelectorAll("[data-analytical-platform]");
+  const languageCards = document.querySelectorAll("[data-language-card]");
   const navDropdownItems = document.querySelectorAll(".has-dropdown");
   const workshopToggles = document.querySelectorAll("[data-workshop-toggle]");
   const focusCards = document.querySelectorAll(".focus-card");
@@ -26,16 +27,17 @@
       "nav.home": "Home",
       "home.title": "What I do",
       "home.subtitle": "Narrative author · Analytical writer · Independent applied AI researcher · AI workshop designer",
-      "home.body1": "My work is centered on writing. I develop <strong><em>long-form narrative fiction</em></strong>, which forms the core of my work. I also write <strong><em>analytical essays</em></strong> and <strong><em>technical pieces</em></strong>, bringing to each the discipline of a scientific background: close observation, evidence, structure, and careful qualification.",
-      "home.body2": "AI is one of my recurring subjects and one of the areas where I apply that method. I examine how systems behave in practice, run independent behavioral probes on language models, and test tools against real workflows, documenting configurations, constraints, and limitations rather than repeating marketing claims.",
-      "home.body3": "I also <strong><em>design workshops</em></strong> that help professionals integrate AI into document-heavy work — drafting, research, and review — while keeping judgment and final decisions under human control.",
+      "home.body1": "Hi, I'm Camilo. Welcome — this is where you'll find my most recent work. Take your time looking around.",
+      "home.body2": "My work is centered on writing. I develop <strong><em>long-form narrative fiction</em></strong>, which forms the core of my work. I also write <strong><em>analytical essays</em></strong> and <strong><em>technical pieces</em></strong>, bringing to each the discipline of a scientific background: close observation, evidence, structure, and careful qualification.",
+      "home.body3": "AI is one of my recurring subjects and one of the areas where I apply that method. I examine how systems behave in practice, run independent behavioral probes on language models, and test tools against real workflows, documenting configurations, constraints, and limitations rather than repeating marketing claims.",
+      "home.body4": "I also <strong><em>design workshops</em></strong> that help professionals integrate AI into document-heavy work — drafting, research, and review — while keeping judgment and final decisions under human control.",
       "bio.title": "Bio",
       "bio.body1": "I am from Masaya, Nicaragua, and trained as a biologist before spending fifteen years in environmental science research, specializing in paleolimnology — reconstructing long-term ecosystem change from lake sediment records. My background includes a master’s degree in water sciences at CIRA/UNAN-Managua, doctoral research at Queen’s University’s PEARL Lab, and six years of university teaching in Nicaragua and Canada in biology, statistics, and scientific methodology.",
       "bio.body2": "After my doctoral program ended following a health crisis in 2025, I redirected the discipline developed through research and teaching toward writing. This marked a change of field rather than a break in method: observation, evidence, structure, and careful qualification remain central to how I work. I work bilingually in Spanish and English.",
       "nav.narrative": "Narrative Work",
       "nav.novel": "Novel",
       "novel.title": "Novel",
-      "novel.spanish.type": "Novel in progress",
+      "novel.spanish.type": "Novel in progress · 40% drafted",
       "novel.rights": "All rights reserved.",
       "novel.registration": "Work registered with Safe Creative:",
       "nav.visualNarrative": "Visual Narrative",
@@ -127,16 +129,17 @@
       "nav.home": "Inicio",
       "home.title": "Mi trabajo",
       "home.subtitle": "Narrador · Escritor analítico · Investigador de IA aplicada · Diseñador de talleres de IA",
-      "home.body1": "Mi trabajo se centra en la escritura. Desarrollo <strong><em>ficción narrativa</em></strong> de largo aliento, que constituye el núcleo de mi trabajo. También escribo <strong><em>ensayos analíticos</em></strong> y <strong><em>piezas técnicas</em></strong>, aplicando a cada una la disciplina de mi formación científica: observación rigurosa, evidencia, estructura y precisión en las afirmaciones.",
-      "home.body2": "La IA es uno de mis temas recurrentes y uno de los campos donde aplico ese método. Examino cómo se comportan los sistemas en la práctica, realizo pruebas conductuales independientes con modelos de lenguaje y evalúo herramientas en flujos de trabajo reales, documentando configuraciones, restricciones y limitaciones en lugar de repetir afirmaciones comerciales.",
-      "home.body3": "Además, <strong><em>diseño talleres</em></strong> que ayudan a profesionales a integrar la IA en trabajos intensivos en documentación —redacción, investigación y revisión—, manteniendo el criterio y las decisiones finales bajo control humano.",
+      "home.body1": "Hola, soy Camilo. Bienvenido a mi sitio — aquí vas a encontrar mi trabajo más reciente. Navegalo con calma.",
+      "home.body2": "Mi trabajo se centra en la escritura. Desarrollo <strong><em>ficción narrativa</em></strong> de largo aliento, que constituye el núcleo de mi trabajo. También escribo <strong><em>ensayos analíticos</em></strong> y <strong><em>piezas técnicas</em></strong>, aplicando a cada una la disciplina de mi formación científica: observación rigurosa, evidencia, estructura y precisión en las afirmaciones.",
+      "home.body3": "La IA es uno de mis temas recurrentes y uno de los campos donde aplico ese método. Examino cómo se comportan los sistemas en la práctica, realizo pruebas conductuales independientes con modelos de lenguaje y evalúo herramientas en flujos de trabajo reales, documentando configuraciones, restricciones y limitaciones en lugar de repetir afirmaciones comerciales.",
+      "home.body4": "Además, <strong><em>diseño talleres</em></strong> que ayudan a profesionales a integrar la IA en trabajos intensivos en documentación —redacción, investigación y revisión—, manteniendo el criterio y las decisiones finales bajo control humano.",
       "bio.title": "Bio",
       "bio.body1": "Soy de Masaya, Nicaragua, y me formé como biólogo antes de dedicar quince años a la investigación en ciencias ambientales, con especialización en paleolimnología: la reconstrucción de cambios ecosistémicos de largo plazo a partir de registros en sedimentos lacustres. Mi trayectoria incluye una maestría en Ciencias del Agua en el CIRA/UNAN-Managua, investigación doctoral en el PEARL Lab de Queen’s University y seis años de docencia universitaria en Nicaragua y Canadá en biología, estadística y metodología científica.",
       "bio.body2": "Después de que mi programa doctoral terminara tras una crisis de salud en 2025, reorienté hacia la escritura la disciplina desarrollada durante años de investigación y docencia. Esto marcó un cambio de campo, no una ruptura de método: la observación, la evidencia, la estructura y la precisión en las afirmaciones siguen siendo centrales en mi trabajo. Trabajo de forma bilingüe en español e inglés.",
       "nav.narrative": "Obra narrativa",
       "nav.novel": "Novela",
       "novel.title": "Novela",
-      "novel.spanish.type": "Novela en progreso",
+      "novel.spanish.type": "Novela en progreso · 40% redactada",
       "novel.rights": "Todos los derechos reservados.",
       "novel.registration": "Obra registrada en Safe Creative:",
       "nav.visualNarrative": "Narrativa visual",
@@ -272,6 +275,9 @@
       if (label) {
         element.setAttribute("aria-label", label);
       }
+    });
+    languageCards.forEach(function (card) {
+      card.hidden = card.getAttribute("data-language-card") !== activeLanguage;
     });
 
     if (languageToggle) {
