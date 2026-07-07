@@ -1,6 +1,9 @@
 (function () {
   const STORAGE_KEY = "eonimae_theme";
   const LANGUAGE_STORAGE_KEY = "eonimae_language";
+  const VISIT_STORAGE_KEY = "eonimae_last_visit_at";
+  const VISIT_INTERVAL = 2 * 60 * 60 * 1000;
+  const LOCAL_HOSTS = ["localhost", "127.0.0.1", ""];
   const themeToggle = document.querySelector("[data-theme-toggle]");
   const languageToggle = document.querySelector("[data-language-toggle]");
   const viewPanels = document.querySelectorAll("[data-view]");
@@ -407,6 +410,58 @@
       });
   }
 
+  function getLastVisitAt() {
+    try {
+      const storedValue = window.localStorage.getItem(VISIT_STORAGE_KEY);
+      const timestamp = Number(storedValue);
+
+      return Number.isFinite(timestamp) ? timestamp : 0;
+    } catch (error) {
+      return 0;
+    }
+  }
+
+  function setLastVisitAt(timestamp) {
+    try {
+      window.localStorage.setItem(VISIT_STORAGE_KEY, String(timestamp));
+    } catch (error) {
+      // If storage is unavailable, avoid breaking the site.
+    }
+  }
+
+  function waitForGoatCounter(callback) {
+    if (window.goatcounter && typeof window.goatcounter.count === "function") {
+      callback();
+      return;
+    }
+
+    let attempts = 0;
+    const timer = window.setInterval(function () {
+      attempts += 1;
+
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.clearInterval(timer);
+        callback();
+      } else if (attempts >= 50) {
+        window.clearInterval(timer);
+      }
+    }, 100);
+  }
+
+  function registerVisitIfDue() {
+    if (LOCAL_HOSTS.includes(window.location.hostname)) return;
+
+    const now = Date.now();
+    const lastVisitAt = getLastVisitAt();
+
+    if (lastVisitAt && now - lastVisitAt < VISIT_INTERVAL) return;
+
+    waitForGoatCounter(function () {
+      window.goatcounter.count({ no_session: true });
+      setLastVisitAt(now);
+    });
+  }
+
   applyLanguage(getInitialLanguage());
   applyTheme(getInitialTheme());
 
@@ -578,6 +633,7 @@
     });
   });
 
+  registerVisitIfDue();
   loadVisitCount();
   showView(getViewFromHash(), false);
 })();
