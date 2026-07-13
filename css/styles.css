@@ -459,6 +459,48 @@ body.dark-mode .link-pill {
   max-width: var(--measure);
 }
 
+.workshop-section-head {
+  align-items: start;
+  display: grid;
+  gap: clamp(24px, 4vw, 44px);
+  grid-template-columns: minmax(0, var(--measure)) minmax(150px, 220px);
+  max-width: none;
+}
+
+.workshop-copy {
+  max-width: var(--measure);
+}
+
+.workshop-video-card {
+  justify-self: start;
+  margin: 4px 0 0;
+  width: 100%;
+}
+
+.workshop-video-card[hidden] {
+  display: none;
+}
+
+.workshop-video {
+  aspect-ratio: 9 / 16;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: block;
+  max-height: min(62vh, 520px);
+  object-fit: contain;
+  width: 100%;
+}
+
+.workshop-video-card figcaption {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 620;
+  line-height: 1.45;
+  margin-top: 10px;
+}
+
 .platform-filter {
   margin: -10px 0 30px;
 }
@@ -1001,6 +1043,14 @@ body.dark-mode .footer-logo-dark {
 
   .area-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workshop-section-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workshop-video-card {
+    max-width: 240px;
   }
 
   .section-head-split {
