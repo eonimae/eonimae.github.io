@@ -539,6 +539,37 @@ body.dark-mode .link-pill {
   max-width: 712.4px;
 }
 
+.home-letters {
+  margin-top: 36px;
+  max-width: 712.4px;
+  width: 100%;
+}
+
+.home-letters::before {
+  background: var(--border-strong);
+  content: "";
+  display: block;
+  height: 1px;
+  margin-bottom: 15px;
+  width: 46px;
+}
+
+.home-letters-title {
+  color: var(--text-primary);
+  font-size: 0.96rem;
+  font-weight: 660;
+  line-height: 1.35;
+  margin: 0 0 4px;
+}
+
+.home-letters-copy {
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin: 0 0 4px;
+}
+
 #home .view-copy strong em {
   color: var(--text-secondary);
 }
@@ -954,7 +985,24 @@ body.dark-mode .mini-card-grid.card-focus-group:has(.mini-card:active) .mini-car
 }
 
 .contact-card {
-  padding: 28px;
+  padding: 24px;
+}
+
+.contact-card-full {
+  grid-column: 1 / -1;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
 }
 
 .site-footer {
